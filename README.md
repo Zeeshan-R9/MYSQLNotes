@@ -38,3 +38,24 @@ that column. Like a primary key, an index can contain more than one columns.
 
 - **Foreign Key Definition**:  
   The **primary key** of one table, when stored in another table, is referred to as the **foreign key** of that table.  
+
+- If two tables have a 1-1 relationship, the  data of two tables can be stored in
+  a single table.
+
+- Many-Many Relationship is established by using an intermediate table that has
+  a 1-Many relationship with the two tables in the many-many relationship.
+
+- By making the **foreign key** enforce the *Refrential Integrity*, we can make
+  sure that the value that we set in the foriegn cell is also present in the other
+  tables primary key.
+
+---
+## How columns are defined
+- Columns whose values are automatically generate by the **DBMS** are called
+  **Auto-incremented columns**.
+- **Columns Data Types:**
+  - *CHAR, VCHAR: A string of letters, numbers or symbols.*
+  - *INT, DECIMAL: Integer or Decimal numbers that contain exact values.*
+  - *FLOAT: Floating-point numbers that contain approximate values.*
+  - *DATE: Date & Time*
+
