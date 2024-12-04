@@ -86,10 +86,9 @@ ORDER BY vendor_name, invoice_total DESC
 ```sql
 -- INSERT Statement
 INSERT INTO invoices 
-(vendor_id, invoice_number, invoice_date, 
-invoice_total, terms_id, invoice_due_date) 
-VALUES 
-(12, 132891751 , '2018-07-18', 165, 3, ' 2018-08-17') 
+  (vendor_id, invoice_number, invoice_date, 
+  invoice_total, terms_id, invoice_due_date) 
+VALUES (12, 132891751 , '2018-07-18', 165, 3, ' 2018-08-17') 
 
 -- UPDATE Statement
 UPDATE invoices 
@@ -101,5 +100,12 @@ DELETE FROM invoices
 WHERE invoice_number = '4-342-8069'
 ```
 
-
+## MySQL Coding Guidelines
+- MySQL is a *case-insensitive* language.
+- **CAPITALIZE** all keywords.
+- Separate the words in names with *underscores*.
+- Start each clause on a new line.
+- Split long clauses into multiple lines and use 
+indentation for continued lines.
+--- 
 
