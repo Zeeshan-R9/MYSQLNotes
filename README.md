@@ -26,3 +26,9 @@
 - If for example, we frequenty sort the rows by **ZIP Codes**, then we can define an **Index** for 
 that column. Like a primary key, an index can contain more than one columns.
 
+---
+## How tables are related
+- Tables are related to each other by keys.
+- Relationships are built typically through primary and foriegn keys.
+- The primary key of one table stored in other table is referred to as foreign
+key of that table.
