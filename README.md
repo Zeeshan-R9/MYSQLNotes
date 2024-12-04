@@ -1,2 +1,3 @@
 # MYSQL Notes
-To backup files, a server usually has a separate disk or an offline storage.
+To backup files, a server usually has a backup disk drive or an offline storage.
+
