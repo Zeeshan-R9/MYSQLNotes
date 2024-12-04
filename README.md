@@ -10,3 +10,5 @@
 ### If a primary key consists of two or more columns then it is called a 
 ### Composit Primary Key
 
+### Indexes provide an efficient way to access the values of the rows and since
+### applications typically use keys to access the data so an index is 
