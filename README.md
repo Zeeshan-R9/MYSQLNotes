@@ -59,3 +59,13 @@ that column. Like a primary key, an index can contain more than one columns.
   - *FLOAT: Floating-point numbers that contain approximate values.*
   - *DATE: Date & Time*
 
+## Working with SQL statements
+- The **select** statement is also called a query.
+- The result of the **select** statement (query) is a **result
+table** or **result set** that can have calculated values. It is 
+also know as a **Logical Table**
+- When an application requests data from the database it receives
+a **Result Set**.
+
+### *Joining data from two or more tables*
+*A join lets us combine data from two or more tables and get back a resutl table or result set.*
