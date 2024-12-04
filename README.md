@@ -69,3 +69,18 @@ a **Result Set**.
 
 ### *Joining data from two or more tables*
 *A join lets us combine data from two or more tables and get back a resutl table or result set.*
+
+*An **inner join** allows us to join data from two tables only
+if the values of the columns in the **FROM** clause match.*
+
+**EXAMPLE:**
+```sql
+SELECT vender_name, invoice_no, invoice_date, invoice_total
+FROM vendors INNER JOIN invoices 
+  ON vendors.vendor_id = invoices.invoice_id
+WHERE invoice_total >= 500
+ORDER BY vendor_name, invoice_total DESC 
+```
+---
+### INSERT, UPDATE, DELETE data from tables
+
