@@ -1,15 +1,25 @@
-# MYSQL Notes
-1. To backup files, a server usually has a backup disk drive or an offline storage.
-2. The server requires and Database Management System like MySQL or Microsoft
-   SQL server. This management system manages the databases store on the server.
-3. The application programs use the *data access* **API** to access the database.
-   For **Java Applications** the *data access API* is called **JDBC** (Java 
-   Database Connectivity). 
+# MySQL Notes
 
+## Key Concepts
+1. **Backup Storage**:  
+   To ensure data safety, servers typically utilize:
+   - A **backup disk drive** for redundancy.
+   - **Offline storage** for additional protection.
 
-### If a primary key consists of two or more columns then it is called a 
-### Composit Primary Key
+2. **Database Management Systems (DBMS)**:  
+   Servers rely on DBMS tools like **MySQL** or **Microsoft SQL Server** to manage databases stored on them.
 
-### Indexes provide an efficient way to access the values of the rows and since
-### applications typically use keys to access the data so an index is automatically
-### create for each we define.
+3. **Data Access**:  
+   - Application programs interact with databases through the *data access* **API**.  
+   - For **Java applications**, this API is known as **JDBC** (*Java Database Connectivity*).
+
+---
+
+## Primary Keys
+- A **Composite Primary Key** is a primary key that consists of two or more columns.
+
+---
+
+## Indexing
+- **Indexes** significantly enhance data retrieval efficiency by optimizing access to row values.  
+- Since applications often use keys for data access, an index is automatically created for every key defined.
