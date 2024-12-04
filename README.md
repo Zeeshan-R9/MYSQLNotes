@@ -83,4 +83,23 @@ ORDER BY vendor_name, invoice_total DESC
 ```
 ---
 ### INSERT, UPDATE, DELETE data from tables
+```sql
+-- INSERT Statement
+INSERT INTO invoices 
+(vendor_id, invoice_number, invoice_date, 
+invoice_total, terms_id, invoice_due_date) 
+VALUES 
+(12, 132891751 , '2018-07-18', 165, 3, ' 2018-08-17') 
+
+-- UPDATE Statement
+UPDATE invoices 
+SET credit_total = 35.89 
+WHERE invoice_number = '367447'
+
+-- DELETE Statement
+DELETE FROM invoices 
+WHERE invoice_number = '4-342-8069'
+```
+
+
 
