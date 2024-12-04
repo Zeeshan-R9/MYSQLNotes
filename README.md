@@ -108,4 +108,11 @@ WHERE invoice_number = '4-342-8069'
 - Split long clauses into multiple lines and use 
 indentation for continued lines.
 --- 
+## How to access database through an application program
+To access MySQL database programming languages provide an API. These API classes use a **driver** to communicate with
+the database server.
+
+For some languages, the database driver is built-in while
+for others it needs to be downloaded.
+
 
