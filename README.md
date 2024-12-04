@@ -25,3 +25,4 @@
 - Since applications often use keys for data access, an index is automatically created for every key defined.
 - If for example, we frequenty sort the rows by **ZIP Codes**, then we can define an **Index** for 
 that column. Like a primary key, an index can contain more than one columns.
+
