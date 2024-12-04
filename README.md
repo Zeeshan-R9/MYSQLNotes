@@ -27,8 +27,14 @@
 that column. Like a primary key, an index can contain more than one columns.
 
 ---
-## How tables are related
-- Tables are related to each other by keys.
-- Relationships are built typically through primary and foriegn keys.
-- The primary key of one table stored in other table is referred to as foreign
-key of that table.
+## How Tables Are Related  
+
+- **Table Relationships**:  
+  Tables are connected to each other using **keys**.  
+
+- **Types of Keys**:  
+  - **Primary Key**: A unique identifier for each record in a table.  
+  - **Foreign Key**: A primary key from one table that is stored in another table to establish a relationship.  
+
+- **Foreign Key Definition**:  
+  The **primary key** of one table, when stored in another table, is referred to as the **foreign key** of that table.  
