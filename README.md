@@ -8,5 +8,5 @@
 
 
 ### If a primary key consists of two or more columns then it is called a 
-### 
+### Composit Primary Key
 
