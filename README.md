@@ -169,6 +169,13 @@ use database_name;
 **Using Aliases**
 ![Select](./images/select_syntax3.png)
 
+**Arithematic Operators**
+![Select](./images/arithematic_ops.png)
+
+
+**```Concat()``` function**
+
+![Select](./images/concat.png)
 
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
