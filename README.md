@@ -157,6 +157,12 @@ To select a database
 ```sql
 use database_name;
 ```
+---
+## Basic MySQL Statments
+1. ```select```
+
+![Select](./images/select_syntax.png)
+
 
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
