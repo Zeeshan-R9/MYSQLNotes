@@ -166,5 +166,9 @@ use database_name;
 **Expanded Syntax**
 ![Select](./images/select_syntax2.png)
 
+**Using Aliases**
+![Select](./images/select_syntax3.png)
+
+
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
