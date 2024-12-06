@@ -163,6 +163,8 @@ use database_name;
 
 ![Select](./images/select_syntax.png)
 
+**Expanded Syntax**
+![Select](./images/select_syntax2.png)
 
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
