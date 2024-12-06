@@ -206,5 +206,50 @@ clause.
 
 ## How to code the ```WHERE``` clause
 
+- We can use comparison operators to compare values of unlike datatype e.g, '7' = 7.
+- MySQL is case-insensitive for strings 'CA' is same as 'ca'.
+But we can use ```CAST()``` or ```CONVERT()``` functions to cast as well.
+- To test for null values use ```IS NULL```.
+- When one of the parameters of the comparison is null the result
+will always be a null value.
+
+![Comparison Operators](./images/comp_ops.png)
+
+With logical operators
+![Logical Operators](./images/logical_ops.png)
+
+With the ```IN``` keyword
+![Logical Operators](./images/in.png)
+
+
+With the ```BETWEEN``` keyword
+
+The lower and upper values of the range are inclusive.
+
+![Logical Operators](./images/between.png)
+---
+
+Using ```LIKE``` & ```REGEXP```
+
+The ```LIKE``` is an older operator that allows us to match simple strings.
+![Regex](./images/regex_like.png)
+
+Using ```IS NULL```
+```NULL``` is not the same as ```empty string ""```.
+
+![Regex](./images/null.png)
+
+
+Using ```ORDER BY``` clause
+
+Here, in the below image in the last example, the rows are sorted first by state in ascending order then by city in ascending order and then by name in ascending order.
+
+Ascending order is the default sorting order.
+
+![ORDER BY](./images/order_by.png)
+
+
+
+
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
