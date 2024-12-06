@@ -127,25 +127,35 @@ can use this command line tool to connect to the server and execute the queries.
 | -u       | For specifying username
 
 ```bash
-cd <path_to_mysql_executale file>
+cd <path_to_mysql_executale_file>
 mysql -u root -p
-
+Password>
 ```
 Or
 
 ```bash
-cd <path_to_mysql_executale file>
+cd <path_to_mysql_executale_file>
 mysql -h murach.com -u root -p
-
+Password>
 ```
 
 For localhost
 ```bash
-cd <path_to_mysql_executale file>
+cd <path_to_mysql_executale_file>
 # Any of these two command will work fine.
 mysql -h localhost -u root -p
-mysql -u root -p                
+mysql -u root -p    
+Password>            
+```
+---
+To view the avaiable databases
+```sql
+show databases;
+```
+To select a database
+
+```sql
+use database_name;
 ```
 
-
-
+---
