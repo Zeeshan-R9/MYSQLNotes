@@ -177,5 +177,34 @@ use database_name;
 
 ![Select](./images/concat.png)
 
+
+### Using functions with ```strings```, ```dates``` and ```numbers```
+- The ```LEFT()``` function operates on strings. It returns the number of characters from the string.
+- The ```DATE_FORMAT()``` function operates on dates. It formats
+the date according to the specified format.
+- The ```ROUND()``` function operates on numbers. The second parameter specifies how many decimal places to keep, if omitted
+rounds the number to the nearest value.
+
+![Select](./images/left_format_date_format.png)
+
+
+## Testing expressions & functions without using ```FROM``` clause
+This is useful to test expressions before you use them in actual
+queries using the ```FROM``` clause.
+
+Here, the ```CURRENT_DATE()``` function returns the current date.
+The paranthesis are optional for this function.
+
+![Select](./images/testing_without_from.png)
+
+We can eleminate the duplicated (identical) rows from the result set by using the ```DISTINCT``` keyword. Code it immediately after the ```SELECT``` clause. 
+
+```DISTINCTROW``` is the same as ```DISTINCT```.
+
+There is also another keyword ```ALL``` which is used by default when we use the ```SELECT```
+clause.
+
+## How to code the ```WHERE``` clause
+
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
