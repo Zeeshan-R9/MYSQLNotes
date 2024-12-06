@@ -115,4 +115,37 @@ the database server.
 For some languages, the database driver is built-in while
 for others it needs to be downloaded.
 
+---
+## Using MySQL Command line client
+If you don't have MySQL Workbench installed on your system then you 
+can use this command line tool to connect to the server and execute the queries.
+
+| Option   | Usage    
+|----------|----------
+| -p       | To prompt for password    
+| -h       | For host IP address or URL
+| -u       | For specifying username
+
+```bash
+cd <path_to_mysql_executale file>
+mysql -u root -p
+
+```
+Or
+
+```bash
+cd <path_to_mysql_executale file>
+mysql -h murach.com -u root -p
+
+```
+
+For localhost
+```bash
+cd <path_to_mysql_executale file>
+# Any of these two command will work fine.
+mysql -h localhost -u root -p
+mysql -u root -p                
+```
+
+
 
