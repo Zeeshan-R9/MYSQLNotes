@@ -262,6 +262,11 @@ FROM vendors
 ORDER BY vendor_info, vendor_id; -- Here, we've used alias
 ```
 ![ORDER BY](./images/order_by2.png)
+---
+
+## Working with the ```LIMIT``` clause
+
+![LIMIT](./images/limit.png)
 
 
 
