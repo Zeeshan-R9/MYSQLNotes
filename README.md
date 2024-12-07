@@ -249,6 +249,20 @@ Ascending order is the default sorting order.
 ![ORDER BY](./images/order_by.png)
 
 
+We can also use the column numbers to specify the sort.
+
+**For Example:** 
+In this figure below we have used columns numbers where 2 represents the 2nd column which is the concatenation of 3 columns and the by first column which is the name.
+
+We can also use the aliases in the ```ORDER BY``` clause
+```sql
+SELECT CONCAT(vendor_name, ' ', vendor_address) 
+AS vendor_info
+FROM vendors
+ORDER BY vendor_info, vendor_id; -- Here, we've used alias
+```
+![ORDER BY](./images/order_by2.png)
+
 
 
 ---
