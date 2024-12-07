@@ -267,7 +267,23 @@ ORDER BY vendor_info, vendor_id; -- Here, we've used alias
 ## Working with the ```LIMIT``` clause
 
 ![LIMIT](./images/limit.png)
+---
 
+## How to work with ìnner joins
+
+*A Join lets us combine the results of two or more tables in a single **result set**.*
+
+![LIMIT](./images/inner_join.png)
+
+## How to use table aliases
+A table alias is typically as a single character or two characters. Used to shorten the table name.
+![TABLE ALIAS](./images/table_alias.png)
+
+
+## Join tables from different databases
+MySQL databases are sometimes called ```schemas```.
+To use the table of another database prefix the name of the table with database name.
+![JOIN tables of different database](./images/join2.png)
 
 
 ---
