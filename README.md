@@ -308,7 +308,13 @@ based on specification.
 
 
 ## Join tables with ```USING``` & ```NATURAL``` keyword
+![USING keword](./images/using.png)
 
+
+WE don't specify the column name when using the ```NATURAL``` keyword. Database automaticall picks the 
+columns that are common in both tables. If there are more than one common column then the database also includes those in the join.
+
+![NATURAL keword](./images/natural.png)
 
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
