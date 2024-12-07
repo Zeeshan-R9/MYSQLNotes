@@ -316,5 +316,20 @@ columns that are common in both tables. If there are more than one common column
 
 ![NATURAL keword](./images/natural.png)
 
+## Using ```CROSS JOINS```
+![CROSS JOIN](./images/cross_join.png)
+
+
+## Using ```UNIONS```
+*Unions are like joins except that they combine rows from two **Result sets.***
+
+![UNION](./images/union.png)
+
+![UNION](./images/union2.png)
+
+A **Full Outer Join** using ```UNIONS```
+
+![UNION](./images/full_outer_join_using_unions.png)
+
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
