@@ -330,6 +330,50 @@ columns that are common in both tables. If there are more than one common column
 A **Full Outer Join** using ```UNIONS```
 
 ![UNION](./images/full_outer_join_using_unions.png)
+---
+
+
+
+## ```CREATE```, ```UPDATE``` & ```DELETE```
+### Creating a copy of table
+*We can create a copy of a tabel as follows but when we do this MySQL does not retain inforamtion about primary keys, foreign keys and indexes etc. It only copies the data into the tables.*
+
+```sql
+CREATE TABLE employees_copy AS
+SELECT * FROM employees; 
+```
+![COPY TABLE](./images/copy_table.png)
+
+The ```INSERT``` statment
+We can use the ````DEFAULT``` keyword to make SQL 
+set a default value for us.
+![INSERT](./images/insert.png)
+
+We can also use a subquery with the ```INSERT``` statement.
+
+**NOTE:** We donot enclose the select statement in paranthesis when using with ```INSERT``` statment like we would do with ```UPDATE``` or ```SELECT``` statment.
+
+```sql
+INSERT INTO EMPLOYEES (emp_id, emp_name, emp_salary)
+SELECT (emp_id, emp_name, emp_salary) FROM employees_copy;
+```
+![SUBQUERY](./images/subquery.png)
+
+
+### ```UPDATE``` query
+![SUBQUERY](./images/update.png)
+
+With subquery
+
+![SUBQUERY](./images/update_subquery.png)
+
+
+
+### ```DELETE``` query
+If we omit the ```WHERE``` clause it deletes all the rows.
+We cannot delete rows whose primary key is used as a foreign key in other tables. First we need to delete those. Also in safe mode, MySQL workbench prevents us to use the ```DELETE``` clause if ```WHERE``` clause is not used or the primary or the foreign key is not used.
+
+![DELETE](./images/delete.png)
 
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
