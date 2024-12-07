@@ -286,5 +286,29 @@ To use the table of another database prefix the name of the table with database 
 ![JOIN tables of different database](./images/join2.png)
 
 
+## Using self join
+We need to qualify the volumn names with the aliases here.
+
+![JOIN tables of different database](./images/selfjoin.png)
+
+
+## Implicit INNER JOIN
+![Implicit Inner Join](./images/implicit_inner_join.png)
+
+
+## Explicit Outer Joins
+*Outer Join returns all the rows regardless of whether the join condition is true.*
+
+The ```OUTER``` keyword is optional and is usually omitted.
+
+It returns all the matched rows of condition plus the umatched rows from the first(LEFT) or second(RIGHT) table 
+based on specification.
+
+![Outer Join](./images/outer.png)
+
+
+## Join tables with ```USING``` & ```NATURAL``` keyword
+
+
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
