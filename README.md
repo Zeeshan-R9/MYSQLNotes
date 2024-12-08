@@ -374,6 +374,99 @@ If we omit the ```WHERE``` clause it deletes all the rows.
 We cannot delete rows whose primary key is used as a foreign key in other tables. First we need to delete those. Also in safe mode, MySQL workbench prevents us to use the ```DELETE``` clause if ```WHERE``` clause is not used or the primary or the foreign key is not used.
 
 ![DELETE](./images/delete.png)
+---
+
+## Working with Aggregate functions
+*Functions that operate on a series of values and return a single value are known as **Aggregate functions.***
+
+*A query that contains one or more aggregate functions is known as **Summary Query.***
+
+Typically, these functions take a column name but can also take complex expressions.
+
+**Aggregate functions** except for the `COUNT(*)` exclude ```null``` values. The ```COUNT(*)``` function with `*` in it counts the rows with null values as well.
+
+![AGGREGATE FUNCTIONS](./images/aggregate_functions.png)
+![AGGREGATE FUNCTIONS](./images/aggregate_functions2.png)
+
+![AGGREGATE FUNCTIONS](./images/aggregate_functions3.png)
+
+
+## The `GROUP BY` & `HAVING` clause
+- The `GROUP BY` clause determines how the rows are group.
+- The `HAVING` clause determines which groups are included in the final result.
+
+The `SELECT` clause in SQL, when used with a `GROUP BY` clause, generally includes only:
+
+1. Columns that are part of the `GROUP BY` clause.
+2. Aggregate functions like `SUM`, `COUNT`, `AVG`, etc.
+3. Expressions that result in a constant value.
+4. Columns that are **functionally dependent** on a grouping column.
+
+### **Functional Dependency Explained**
+A column is **functionally dependent** on another column if:
+- The column used for grouping is a **primary key** for the other column.
+- OR the grouping column is **unique** and does not allow null values (acts like a primary key).
+
+### **Example with Explanation**
+
+#### Table: `Orders`
+
+| OrderID | CustomerID | CustomerName | OrderDate   | TotalAmount |
+|---------|------------|--------------|-------------|-------------|
+| 1       | 101        | Alice        | 2024-01-01  | 100         |
+| 2       | 102        | Bob          | 2024-01-02  | 200         |
+| 3       | 101        | Alice        | 2024-01-03  | 150         |
+| 4       | 103        | Charlie      | 2024-01-04  | 300         |
+
+- `OrderID` is the primary key for this table.
+- `CustomerID` is unique and identifies a customer (`CustomerName` is functionally dependent on `CustomerID`).
+
+#### Query Example
+
+```sql
+SELECT CustomerID, CustomerName, SUM(TotalAmount) AS TotalSpent
+FROM Orders
+GROUP BY CustomerID;
+```
+
+#### Explanation:
+1. **`CustomerID`**: Included in the `GROUP BY` clause for grouping.
+2. **`SUM(TotalAmount)`**: An aggregate function.
+3. **`CustomerName`**: Included because it is **functionally dependent** on `CustomerID`.
+   - `CustomerID` is unique, and `CustomerName` is determined by it.
+
+#### Result:
+
+| CustomerID | CustomerName | TotalSpent |
+|------------|--------------|------------|
+| 101        | Alice        | 250        |
+| 102        | Bob          | 200        |
+| 103        | Charlie      | 300        |
+
+#### Adding Constant Expressions
+
+You can also add a constant expression:
+
+```sql
+SELECT CustomerID, 'FixedValue' AS ConstantColumn, SUM(TotalAmount) AS TotalSpent
+FROM Orders
+GROUP BY CustomerID;
+```
+
+#### Result:
+
+| CustomerID | ConstantColumn | TotalSpent |
+|------------|----------------|------------|
+| 101        | FixedValue     | 250        |
+| 102        | FixedValue     | 200        |
+| 103        | FixedValue     | 300        |
+
+### Key Takeaways
+- You can include additional columns in the `SELECT` clause only if they are functionally dependent on the grouping columns.
+- Adding unrelated columns or non-dependent columns will result in an SQL error unless those columns are part of an aggregate function.
+
+![GROUP BY, HAVING](./images/groupBy_having.png)
+
 
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
