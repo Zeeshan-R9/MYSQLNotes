@@ -467,6 +467,51 @@ GROUP BY CustomerID;
 
 ![GROUP BY, HAVING](./images/groupBy_having.png)
 
+By default, MySQL sorts the result of each query in ASC order. However, we can improve the performance of that query by doing, 
+```sql
+ORDER BY NULL
+```
+so that the result is not sorted at all.
+
+- `HAVING` clause can only use the columns included in the `SELECT` statement.
+- `WHERE` clause can include other columns as well.
+- `HAVING` clause can include aggregate functions.
+- `WHERE` clause cannot include the aggregate functions.
+- Conditions in `HAVING` clause are applied to the groups after the grouping.
+- Conditions in `WHERE` clause are applied to the individual rows before the grouping happens.
+
+### Examples to explain these points
+![HAVING, WHERE](./images/having_vs_where.png)
+
+
+### Using `WITH ROLLUP` 
+It is used with the `GROUP BY` clause and gives us the subtotal and the grandtotal of the groups.
+
+In short is summarizes the groups.
+
+![ROLLUP](./images/rollup.png)
+
+`GROUPING` clause
+![ROLLUP](./images/grouping.png)
+
+Display only summary rows.
+![ROLLUP](./images/grouping2.png)
+
+---
+## Aggregate Window Functions
+*These are the functions in which the groups are not collapsed into a single rows instead all of the rows in the result set are returned.*
+![Aggregate window functions](./images/aggregate_window_functions.png)
+
+
+### Frames
+*A frame is a subset of rows within a partition (a group of rows). It is relative to the current row in the result set.*
+
+### Partition 
+*A group of rows based on the columns.*
+
+So a `frame` is a smallet subset of rows within a `partition`.
+
+
 
 ---
 [Visit Repository](https://github.com/Zeeshan-R9/MYSQLNotes.git)
